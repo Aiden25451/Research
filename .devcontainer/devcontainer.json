@@ -1,7 +1,7 @@
 {
   "name": "Research Dev Container",
   "dockerComposeFile": "docker-compose.yml",
-  "service": "app",
+  "service": "dev",
   "workspaceFolder": "/workspace",
 
   "customizations": {
@@ -25,5 +25,5 @@
     }
   },
 
-  "remoteUser": "root"
+  "remoteUser": "devuser"
 }

@@ -1,5 +1,5 @@
 services:
-  app:
+  dev:
     build:
       context: ..
       dockerfile: .devcontainer/Dockerfile
@@ -9,4 +9,6 @@ services:
     environment:
       - PYTHONDONTWRITEBYTECODE=1
       - PYTHONUNBUFFERED=1
+    env_file:
+      - ../.env
     command: sleep infinity
