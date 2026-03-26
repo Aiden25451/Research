@@ -22,6 +22,6 @@ RUN chown -R devuser:devuser /workspace
 
 USER devuser
 COPY requirements.txt .
-RUN pip install --user -r requirements.txt \
-    --extra-index-url https://download.pytorch.org/whl/cpu
+RUN python3 -m venv /home/devuser/.venv
+RUN /home/devuser/.venv/bin/pip install -r requirements.txt
 

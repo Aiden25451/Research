@@ -1,8 +1,12 @@
 {
   "name": "Research Dev Container",
-  "dockerComposeFile": "docker-compose.yml",
+  "dockerComposeFile": ["docker-compose.yml", "docker-compose.gpu.yml"],
   "service": "dev",
   "workspaceFolder": "/workspace",
+
+  "hostRequirements": {
+    "gpu": "optional"
+  },
 
   "customizations": {
     "vscode": {
@@ -16,7 +20,8 @@
         "tonybaloney.vscode-pets"
       ],
       "settings": {
-        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.defaultInterpreterPath": "/home/devuser/.venv/bin/python",
+        "python.terminal.activateEnvironment": true,
         "editor.formatOnSave": true,
         "[python]": {
           "editor.defaultFormatter": "ms-python.black-formatter"
