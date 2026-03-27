@@ -22,3 +22,5 @@ for text in [
     outputs = model(**inputs)
     predicted_class = torch.argmax(outputs.logits).item()
     print("Predicted Sentiment Class:", "Good" if predicted_class == 1 else "Bad")
+
+print(model)
