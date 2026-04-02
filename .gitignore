@@ -1,3 +1,5 @@
 .env
 mymodels
 trainer_output
+
+.venv

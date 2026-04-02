@@ -5,7 +5,7 @@ services:
       dockerfile: .devcontainer/Dockerfile
     volumes:
       - ..:/workspace:cached
-      - pip-cache:/home/devuser/.cache/pip
+      - venv:/workspace/.venv
     working_dir: /workspace
     environment:
       - PYTHONDONTWRITEBYTECODE=1
@@ -15,4 +15,4 @@ services:
     command: sleep infinity
 
 volumes:
-  pip-cache:
+  venv:

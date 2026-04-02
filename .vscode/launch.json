@@ -6,7 +6,7 @@
       "type": "python",
       "request": "launch",
       "program": "${file}",
-      "python": "/home/devuser/.venv/bin/python",
+      "python": "/workspace/.venv/bin/python",
       "console": "integratedTerminal"
     }
   ]

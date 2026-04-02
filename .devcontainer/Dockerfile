@@ -21,7 +21,8 @@ WORKDIR /workspace
 RUN chown -R devuser:devuser /workspace
 
 USER devuser
-COPY requirements.txt .
-RUN python3 -m venv /home/devuser/.venv
-RUN /home/devuser/.venv/bin/pip install -r requirements.txt
+# COPY requirements.txt .
+RUN python3 -m venv /workspace/.venv
+ENV PATH="/workspace/.venv/bin:${PATH}"
+# RUN /home/devuser/.venv/bin/pip install -r requirements.txt
 

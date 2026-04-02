@@ -1,6 +1,6 @@
 {
   "name": "Research Dev Container",
-  "dockerComposeFile": ["docker-compose.yml", "docker-compose.gpu.yml"],
+  "dockerComposeFile": ["docker-compose.yml"],
   "service": "dev",
   "workspaceFolder": "/workspace",
 
@@ -20,15 +20,20 @@
         "tonybaloney.vscode-pets"
       ],
       "settings": {
-        "python.defaultInterpreterPath": "/home/devuser/.venv/bin/python",
+        "python.defaultInterpreterPath": "/workspace/.venv/bin/python",
         "python.terminal.activateEnvironment": true,
         "editor.formatOnSave": true,
         "[python]": {
           "editor.defaultFormatter": "ms-python.black-formatter"
-        }
+        },
+        "python.analysis.extraPaths": [
+          "/workspace/.venv/lib/python3.12/site-packages"
+        ]
+
       }
     }
   },
 
-  "remoteUser": "devuser"
+  "remoteUser": "devuser",
+  "postStartCommand": "/workspace/.venv/bin/pip install -r requirements.txt"
 }
