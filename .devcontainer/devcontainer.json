@@ -24,7 +24,9 @@
           "**/.git/**": true,
           "**/.venv/**": true
         },
-        "python.terminal.activateEnvironment": true,
+        "python.analysis.extraPaths": [
+          "/workspace/.venv/lib/python3.12/site-packages"
+        ],
         "python.defaultInterpreterPath": "/workspace/.venv/bin/python",
         "editor.formatOnSave": true,
         "[python]": {
